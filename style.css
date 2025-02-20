@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+:root {
+  --primaryColor: #23348a;
+  --secondaryColor: #4060ff;
+  --thirdColor: #007100;
+  --white: #fafaff;
+  --error: #da1e28;
+  --warning: #f1c21b;
+  --success: #25a249;
+  --overlay: #121619;
+  --coolGray100: #121619;
+
+  --bodyL: 18px;
+  --buttonL: 20px;
+
+  --paddingSection: 80px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+  color: var(--coolGray100);
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: var(--paddingSection);
+  padding-left: var(--paddingSection);
+  z-index: 999;
+}
+
+.containerNav {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar > img {
+  width: 128px;
+  height: 64px;
+}
+
+.navbar > nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.navbar > nav > ul > li {
+  list-style: none;
+}
+.navbar > nav > ul > li > a {
+  text-decoration: none;
+  color: var(--coolGray100);
+  font-weight: 500;
+}
+
+.translateBTN {
+  display: inline-block;
+  width: 127px;
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  padding: 16px 12px 16px 12px;
+  text-decoration: none;
+}
+
+/* Style untuk Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+  height: 810px; /* Sesuaikan tinggi carousel sesuai kebutuhan */
+  margin: auto;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 80%;
+}
+
+/* style cto */
+.cto {
+  width: 100%;
+  height: 375px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.ctoContainer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    50deg,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: 64px;
+}
+
+.ctoText {
+  width: 813px;
+}
+.ctoText > p {
+  margin-top: 16px;
+}
+.ctoButton {
+  width: 259px;
+  height: 56px;
+  font-size: 20px;
+}
+
+.caption {
+  color: var(--thirdColor);
+  font-size: 20px;
+  font-weight: bold;
+}
+.button {
+  display: inline-block;
+  border: 2px solid var(--primaryColor);
+  color: var(--white);
+  background-color: var(--primaryColor);
+  font-size: var(--buttonL);
+  padding: 10px 26px 10px 26px;
+  text-decoration: none;
+}
+
+.about {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  padding: var(--paddingSection);
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  font-size: var(--bodyL);
+  text-align: justify;
+  margin-top: 25px;
+}
+
+.left-about,
+.right-about {
+  margin: 35px;
+}
+.mitra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--paddingSection);
+  text-align: center;
+  width: 100%;
+  gap: 40px;
+}
+.mitra-text {
+  font-size: var(--bodyL);
+}
+
+.member {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: var(--paddingSection);
+  align-items: center;
+  justify-items: center;
+}
+
+.left-member {
+  /* text-align: justify; */
+  width: 600px;
+}
+
+.member-text {
+  font-size: var(--bodyL);
+  text-align: justify;
+  margin: 0 0 40px 0;
+}
+
+.right-member img {
+  width: 600px;
+}
