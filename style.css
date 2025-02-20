@@ -230,3 +230,45 @@ h2 {
 .right-member img {
   width: 600px;
 }
+
+/* Gallery Style */
+
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#gallery {
+  padding: 176px var(--paddingSection) var(--paddingSection)
+    var(--paddingSection);
+}
+
+.gallery {
+  display: grid;
+  justify-items: center;
+}
+
+.left-gallery {
+  text-align: start;
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+
+.right-gallery {
+  text-align: end;
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+
+.gallery-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery-img img {
+  width: 422px;
+  height: 240px;
+  object-fit: cover;
+}
