@@ -14,7 +14,7 @@
   --warning: #f1c21b;
   --success: #25a249;
   --overlay: #121619;
-  --coolGray100: #121619;
+  --coolGray100: #697077;
 
   --bodyL: 18px;
   --buttonL: 20px;
@@ -25,7 +25,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--white);
-  color: var(--coolGray100);
+  color: var(--overlay);
 }
 
 h2 {
@@ -230,6 +230,136 @@ h2 {
 .right-member img {
   width: 600px;
 }
+
+/* contact us style */
+.contact-us {
+  width: 100%;
+  padding: var(--paddingSection);
+}
+
+.containerContactUs {
+  display: flex;
+  gap: 48px;
+}
+
+.hubungiKami,
+.kontakKami {
+  width: 50%;
+}
+
+.hubungiKami > h2,
+.kontakKami > h2 {
+  color: var(--thirdColor);
+}
+.iprContact {
+  margin: 48px 0 48px 0;
+}
+.kontakKami > h2 {
+  margin-top: 8px;
+}
+
+.contact-form {
+  width: 100%;
+  margin-top: 48px;
+
+  border-radius: 5px;
+}
+
+/* Setiap grup label + input/textarea */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label dan teks "Wajib Diisi" */
+.form-group label {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.required {
+  display: inline-block;
+  color: var(--coolGray100); /* Warna merah untuk menandakan wajib */
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* Input dan textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--white);
+  margin-top: 5px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical; /* Agar textarea bisa di-resize secara vertikal */
+  min-height: 100px;
+}
+
+/* Tombol submit */
+
+.buttonForm {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.btn-submit {
+  display: inline-block;
+  background-color: var(--primaryColor); /* Warna biru */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Efek hover pada tombol */
+.btn-submit:hover {
+  background-color: #007bff;
+}
+
+/* end contact us style */
+
+/* start footer style */
+footer {
+  width: 100%;
+  background-color: var(--primaryColor);
+  height: 88px;
+  padding: 24px 80px 24px 80px;
+  color: var(--white);
+  font-size: 14px;
+}
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-between;
+  gap: 48px;
+}
+
+.footerText,
+.footerIcons {
+  width: 50%;
+}
+
+.footerIcons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.footerIcons > a {
+  text-decoration: none;
+}
+
+/* End footer style */
 
 /* Gallery Style */
 
