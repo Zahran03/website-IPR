@@ -248,6 +248,9 @@ h2 {
   text-align: justify;
   margin: 0 0 40px 0;
 }
+.member-text > p {
+  margin-top: 40px;
+}
 
 .right-member img {
   width: 600px;
