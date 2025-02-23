@@ -286,10 +286,10 @@ h2 {
   width: 50%;
 }
 
-.hubungiKami > h2,
-.kontakKami > h2 {
-  color: var(--thirdColor);
+.contact-us .caption {
+  margin-bottom: 24px;
 }
+
 .iprContact {
   margin: 48px 0 48px 0;
 }
@@ -600,6 +600,11 @@ h5 {
   }
   .member-text {
     width: 100%;
+  }
+
+  .member h2 {
+    font-size: 24px;
+    text-align: left;
   }
 
   .button {
