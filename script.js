@@ -19,3 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentIndex);
   }, 4000);
 });
+
+const hamburgerMenu = document.querySelector("#hamburger-menu");
+const navMenu = document.querySelector("#nav-menu");
+
+hamburgerMenu.addEventListener("click", function () {
+  navMenu.classList.toggle("nav-menu-active");
+});

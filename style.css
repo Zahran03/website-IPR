@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", serif;
   background-color: var(--white);
   color: var(--overlay);
 }
@@ -42,13 +42,25 @@ h2 {
   background-color: var(--white);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-right: var(--paddingSection);
-  padding-left: var(--paddingSection);
+
   z-index: 999;
 }
 
 .containerNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+  padding-right: var(--paddingSection);
+  padding-left: var(--paddingSection);
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.nav-menu {
   display: flex;
   gap: 16px;
 }
@@ -58,19 +70,23 @@ h2 {
   height: 64px;
 }
 
-.navbar > nav > ul {
+.navmenu-img > img {
+  display: none;
+}
+
+.nav-menu > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
-.navbar > nav > ul > li {
+.nav-menu > ul > li {
   list-style: none;
 }
-.navbar > nav > ul > li > a {
+.nav-menu > ul > li > a {
   text-decoration: none;
-  color: var(--coolGray100);
+  color: var(--overlay);
   font-weight: 500;
 }
 
@@ -155,7 +171,13 @@ h2 {
 .ctoButton {
   width: 259px;
   height: 56px;
+}
+.ctoButton > button {
+  width: 100%;
+  height: 100%;
   font-size: 20px;
+  color: var(--primaryColor);
+  font-weight: 500;
 }
 
 .caption {
@@ -339,7 +361,7 @@ footer {
 .footerContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-between;
+  justify-content: justify-between;
   gap: 48px;
 }
 
@@ -352,11 +374,16 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 40px;
   gap: 16px;
 }
 
 .footerIcons > a {
   text-decoration: none;
+}
+
+.footerIcons > a > img {
+  object-fit: cover;
 }
 
 /* End footer style */
@@ -401,4 +428,208 @@ h5 {
   width: 422px;
   height: 240px;
   object-fit: cover;
+}
+
+/* responsive style */
+@media only screen and (max-width: 600px) {
+  /* start navbar menu */
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+  }
+
+  .containerNav {
+    padding: 28px 16px 28px 16px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    gap: 16px;
+  }
+
+  .nav-menu-active {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--white);
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    padding: 24px 16px 24px 16px;
+    width: 60%;
+  }
+
+  .navmenu-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navmenu-img > img {
+    width: 48px;
+    display: block;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .nav-menu > ul {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90%;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .nav-menu > ul > li {
+    width: 100%;
+    height: 38px;
+    border-bottom: 2px solid black;
+  }
+
+  .translateBTN {
+    width: 100%;
+  }
+
+  .carousel {
+    height: 221px;
+  }
+
+  .cto {
+    height: 333px;
+    padding: 48px 16px 48px 16px;
+  }
+  .ctoContainer {
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    justify-items: right;
+    padding: 24px;
+  }
+  .ctoText > h2 {
+    font-size: 24px;
+  }
+  .ctoText > p {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  .ctoButton {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+  .ctoButton > button {
+    display: flex;
+    align-items: center;
+    width: 195px;
+    height: 100%;
+    padding: 13px 28px 13px 28px;
+    font-size: 14px;
+  }
+  .about {
+    display: flex;
+    padding: 48px 16px 48px 16px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .left-about,
+  .right-about {
+    margin: 0;
+    width: 100%;
+    padding: 24px;
+    border: 1px solid var(--coolGray100);
+  }
+  .mitra {
+    padding: 48px 16px 48px 16px;
+    text-align: justify;
+  }
+  .caption {
+    text-align: left;
+  }
+  .member {
+    padding: 48px 16px 48px 16px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .member-text {
+    width: 100%;
+    height: 575px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+  .button {
+    margin-top: 3rem;
+  }
+  .member-text ol {
+    list-style: none; /* Hilangkan nomor default */
+    padding: 0;
+    margin: 0;
+    margin-top: 24px;
+    counter-reset: list-counter; /* Reset counter */
+  }
+  .member-text li {
+    display: flex; /* Menggunakan flexbox */
+    align-items: flex-start; /* Pastikan nomor dan teks sejajar di atas */
+    counter-increment: list-counter; /* Tambah nilai counter per li */
+    /* margin-bottom: 1rem; Jarak antar item (opsional) */
+  }
+  .member-text li::before {
+    content: counter(list-counter) "."; /* Tampilkan nomor list */
+    min-width: 16px; /* Lebar minimum untuk nomor */
+    text-align: right; /* Rata kanan nomor */
+    margin-right: 10px; /* Jarak antara nomor dengan teks */
+  }
+  .member-text li p {
+    margin: 0; /* Hilangkan margin default pada paragraf */
+    font-size: 18px;
+  }
+  .contact-us {
+    padding: 16px;
+  }
+  .containerContactUs {
+    flex-direction: column;
+  }
+  .hubungiKami,
+  .kontakKami {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
+    height: 164px;
+    padding: 24px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 32px;
+  }
+  .footerText,
+  .footerIcons {
+    width: 100%;
+  }
+  .footerIcons {
+    justify-content: center;
+  }
 }

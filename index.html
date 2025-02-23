@@ -4,24 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navbar -->
     <header class="navbar">
-      <a href="/index.html">
-        <img src="assets/logoNavbar.png" alt="iprLogo">
-      </a>
-      <nav class="containerNav">
-        <ul>
-          <li><a href="">Tentang Kami</a></li>
-          <li><a href="">Keanggotaan</a></li>
-          <li><a href="">Hubungi Kami</a></li>
-          <li><a href="/gallery.html">Galeri</a></li>
-          
-        </ul>
-        <a href="" class="translateBTN">Translate</a>
-      </nav>
+      <div class="containerNav">
+        <a href="/index.html">
+          <img src="assets/logoNavbar.png" alt="iprLogo">
+        </a>
+        <button id="hamburger-menu" class="hamburger-menu">
+          <img src="assets/button.png" alt="">
+        </button>
+        <nav class="nav-menu" id="nav-menu">
+          <div class="navmenu-img">
+            <img src="assets/logoNavbar.png" alt="iprLogo">
+          </div>
+          <ul>
+            <li><a href="">Tentang Kami</a></li>
+            <li><a href="">Keanggotaan</a></li>
+            <li><a href="">Hubungi Kami</a></li>
+            <li><a href="/gallery.html">Galeri</a></li>
+          </ul>
+          <a href="" class="translateBTN">Translate</a>
+        </nav>
+
+      </div>
     </header>
     <!-- End Navbar -->
     <!-- Start Hero Section -->
@@ -48,7 +58,9 @@
           <h2>Mari Bergabung dengan IPR</h2>
           <p>Dapatkan informasi mengenai regulasi dan isu seputar industri daur ulang plastik di Indonesia.</p>
         </div>
-        <button class="ctoButton">Bergabung Sekarang</button>
+        <div class="ctoButton">
+          <button>Bergabung Sekarang</button>
+        </div>
       </div>
     </section>
     <!-- End CTO Section -->
@@ -78,8 +90,8 @@
     <!-- Start Mitra Section -->
     <section id="mitra" class="container">
       <div class="mitra">
-        <div class="caption">MITRA KAMI</div>
         <div class="mitra-text">
+          <div class="caption">MITRA KAMI</div>
           <p>
             Kami menjalin kemitraan strategis dengan berbagai perusahaan
             terkemuka untuk memastikan standar kualitas, inovasi, dan layanan
@@ -87,6 +99,9 @@
             dalam menciptakan ekosistem bisnis yang berkelanjutan dan saling
             menguntungkan.
           </p>
+        </div>
+        <div class="mitra-img">
+
         </div>
       </div>
     </section>
@@ -98,21 +113,22 @@
           <div class="caption">KEANGGOTAAN</div>
           <h2>Mari bergabung di Indonesian Plastics Recyclers.</h2>
           <div class="member-text">
-            <p>
-              Manfaat yang akan diterima oleh anggota:<br />
-              1. Mendapatkan akses kepada jaringan pelaku daur ulang plastik di
-              Indonesia<br />
-              2. Mendapatkan wadah komunikasi dengan pembuat kebijakan yang
-              berkaitan dengan daur ulang plastik di Indonesia<br />
-              3. Berhak turut serta dalam acara-acara yang diselenggarakan oleh
-              Indonesian Plastics Recyclers dalam rangka peningkatan
-              keterampilan pelaku daur ulang plastik<br />
-              4. Menerima update mengenai perkembangan terbaru di dunia daur
-              ulang plastik<br />
-              5. Memperbaiki kualitas pendauran ulang plastik di Indonesia
-              dengan melakukan sinergi antara pelaku usaha, pemerintah, dan
-              elemen masyarakat
-            </p>
+            
+            <ol>
+              <li><p>Mendapatkan akses kepada jaringan pelaku daur ulang plastik di
+                Indonesia</p></li>
+              <li><p>Mendapatkan wadah komunikasi dengan pembuat kebijakan yang
+                berkaitan dengan daur ulang plastik di Indonesia</p></li>
+              <li><p>Berhak turut serta dalam acara-acara yang diselenggarakan oleh
+                Indonesian Plastics Recyclers dalam rangka peningkatan
+                keterampilan pelaku daur ulang plastik</p></li>
+              <li><p>Menerima update mengenai perkembangan terbaru di dunia daur
+                ulang plastik</p></li>
+              <li><p>Memperbaiki kualitas pendauran ulang plastik di Indonesia
+                dengan melakukan sinergi antara pelaku usaha, pemerintah, dan
+                elemen masyarakat</p></li>
+            </ol>
+            
             <p>
               Berkesempatan untuk berperan dalam isu-isu yang berkaitan dengan
               usaha daur ulang plastik dan membawakan kontribusi positif bagi
