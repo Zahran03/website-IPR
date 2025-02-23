@@ -22,7 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const hamburgerMenu = document.querySelector("#hamburger-menu");
 const navMenu = document.querySelector("#nav-menu");
+const navbar = document.querySelector("#navbar");
 
 hamburgerMenu.addEventListener("click", function () {
   navMenu.classList.toggle("nav-menu-active");
+});
+
+document.addEventListener("click", function (e) {
+  // Jika klik terjadi di luar navbar, maka sembunyikan navbar
+  if (!navbar.contains(e.target)) {
+    navMenu.style.display = "none";
+  }
 });
