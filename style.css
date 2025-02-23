@@ -216,6 +216,8 @@ h2 {
 .left-about,
 .right-about {
   margin: 35px;
+  padding: 24px;
+  border: 1px solid var(--coolGray100);
 }
 .mitra {
   display: flex;
@@ -229,7 +231,9 @@ h2 {
 .mitra-text {
   font-size: var(--bodyL);
 }
-
+.caption {
+  margin-bottom: 48px;
+}
 .member {
   width: 100%;
   display: flex;
@@ -564,6 +568,15 @@ h5 {
   .mitra {
     padding: 48px 16px 48px 16px;
     text-align: justify;
+  }
+  .mitra-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .mitra-img > img {
+    width: 45.5%;
   }
   .caption {
     text-align: left;
