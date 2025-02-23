@@ -573,7 +573,9 @@ h5 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    justify-content: space-between;
+    gap: 24px;
+    /* gap: 9%; */
   }
   .mitra-img > img {
     width: 45.5%;
@@ -598,26 +600,25 @@ h5 {
     margin-top: 3rem;
   }
   .member-text ol {
-    list-style: none; /* Hilangkan nomor default */
+    list-style: none;
     padding: 0;
     margin: 0;
     margin-top: 24px;
-    counter-reset: list-counter; /* Reset counter */
+    counter-reset: list-counter;
   }
   .member-text li {
-    display: flex; /* Menggunakan flexbox */
-    align-items: flex-start; /* Pastikan nomor dan teks sejajar di atas */
-    counter-increment: list-counter; /* Tambah nilai counter per li */
-    /* margin-bottom: 1rem; Jarak antar item (opsional) */
+    display: flex;
+    align-items: flex-start;
+    counter-increment: list-counter;
   }
   .member-text li::before {
-    content: counter(list-counter) "."; /* Tampilkan nomor list */
-    min-width: 16px; /* Lebar minimum untuk nomor */
-    text-align: right; /* Rata kanan nomor */
-    margin-right: 10px; /* Jarak antara nomor dengan teks */
+    content: counter(list-counter) ".";
+    min-width: 16px;
+    text-align: right;
+    margin-right: 10px;
   }
   .member-text li p {
-    margin: 0; /* Hilangkan margin default pada paragraf */
+    margin: 0;
     font-size: 18px;
   }
   .contact-us {
