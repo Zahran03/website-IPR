@@ -21,7 +21,9 @@
 
   --paddingSection: 80px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", serif;
   background-color: var(--white);
