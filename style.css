@@ -619,9 +619,6 @@ h5 {
   }
   footer {
     width: 100%;
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
     height: 164px;
     padding: 24px;
   }
@@ -638,5 +635,18 @@ h5 {
   }
   .footerIcons {
     justify-content: center;
+  }
+  #gallery {
+    text-align: center;
+    padding: 48px 16px 48px 16px;
+  }
+  .gallery {
+    margin-top: 124px;
+  }
+  .gallery > div {
+    font-size: 20px;
+  }
+  .gallery > h2 {
+    font-size: 24px;
   }
 }

@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
-    <header class="navbar">
-      <img src="assets/logoNavbar.png" alt="iprLogo" />
-      <nav class="containerNav">
-        <ul>
-          <li><a href="">Tentang Kami</a></li>
-          <li><a href="">Keanggotaan</a></li>
-          <li><a href="">Hubungi Kami</a></li>
-          <li><a href="">Galeri</a></li>
-        </ul>
-        <a href="" class="translateBTN">Translate</a>
-      </nav>
+    <header class="navbar" id="navbar">
+      <div class="containerNav">
+        <a href="/index.html">
+          <img src="assets/logoNavbar.png" alt="iprLogo" />
+        </a>
+        <button id="hamburger-menu" class="hamburger-menu">
+          <img src="assets/button.png" alt="" />
+        </button>
+        <nav class="nav-menu" id="nav-menu">
+          <div class="navmenu-img">
+            <img src="assets/logoNavbar.png" alt="iprLogo" />
+          </div>
+          <ul>
+            <li><a href="/index.html">Tentang Kami</a></li>
+            <li><a href="/index.html">Keanggotaan</a></li>
+            <li><a href="/index.html">Hubungi Kami</a></li>
+            <li><a href="/gallery.html">Galeri</a></li>
+          </ul>
+          <a href="" class="translateBTN">Translate</a>
+        </nav>
+      </div>
     </header>
     <!-- End Navbar -->
+    <!-- start Gallert Section -->
     <section id="gallery">
       <div class="gallery">
         <div class="caption">GALERI</div>
@@ -75,5 +92,35 @@
         <img src="assets/galerif7.jpeg" />
       </div>
     </section>
+    <!-- end Gallert Section -->
+    <footer>
+      <div class="footerContainer">
+        <div class="footerText">
+          <p>Indonesian Plastic Recyclers @ 2025. All rights reserved.</p>
+          <p>
+            Created and Designed by Himpunan Mahasiswa Informatika Universitas
+            Nasional.
+          </p>
+        </div>
+        <div class="footerIcons">
+          <a href="">
+            <img src="assets/youtube.png" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/facebook.png" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/instagram.png" alt="" />
+          </a>
+          <a href="">
+            <img src="assets/linkedin.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
