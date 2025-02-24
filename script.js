@@ -34,3 +34,6 @@ document.addEventListener("click", function (e) {
     navMenu.style.display = "none";
   }
 });
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
