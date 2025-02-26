@@ -240,7 +240,7 @@ h2 {
 }
 
 .mitra .caption {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 @keyframes slide {
@@ -257,6 +257,7 @@ h2 {
   background: var(--white);
   white-space: nowrap;
   position: relative;
+  padding: 50px 0;
 }
 
 .logos:before,
