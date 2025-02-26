@@ -233,13 +233,64 @@ h2 {
   padding: var(--paddingSection);
   text-align: center;
   width: 100%;
-  gap: 40px;
 }
+
 .mitra-text {
   font-size: var(--bodyL);
 }
+
 .mitra .caption {
   margin-bottom: 48px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background: var(--white);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 150px;
+  margin: 0 40px;
 }
 
 .member {
@@ -637,16 +688,18 @@ h5 {
     text-align: center;
   }
 
-  .mitra-img {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
-    /* gap: 9%; */
+  .logos:before,
+  .logos:after {
+    height: 100px;
   }
-  .mitra-img > img {
-    width: 45.5%;
+
+  .logos-slide {
+    animation: 15s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 100px;
+    margin: 0 20px;
   }
 
   .member {
