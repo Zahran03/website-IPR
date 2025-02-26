@@ -279,29 +279,61 @@ h2 {
 .containerContactUs {
   display: flex;
   gap: 48px;
+  flex-wrap: wrap;
 }
 
 .hubungiKami,
 .kontakKami {
-  width: 50%;
+  width: 48%;
+  box-sizing: border-box;
 }
 
-.hubungiKami > h2,
-.kontakKami > h2 {
+/* Styling untuk header */
+.hubungiKami > h1,
+.kontakKami > h1 {
+  font-family: "Roboto", sans-serif;
   color: var(--thirdColor);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
-.iprContact {
-  margin: 48px 0 48px 0;
+
+/* Styling untuk tabel di Hubungi Kami */
+.iprContact table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
-.kontakKami > h2 {
+
+.iprContact table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.iprContact table td:first-child {
+  font-weight: bold;
+}
+
+/* Styling untuk iframe (Google Map) */
+.iprMaps iframe {
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+/* Styling untuk form dalam Kontak Kami */
+.kontakKami > h1 {
   margin-top: 8px;
 }
 
 .contact-form {
   width: 100%;
-  margin-top: 48px;
-
+  margin-top: 16px;
   border-radius: 5px;
+  background-color: var(--white);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Setiap grup label + input/textarea */
@@ -309,11 +341,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Label dan teks "Wajib Diisi" */
 .form-group label {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 .required {
@@ -323,32 +355,40 @@ h2 {
   margin-top: 4px;
 }
 
-/* Input dan textarea */
+/* Styling untuk input dan textarea */
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: none;
-  border-bottom: 1px solid #ccc;
+  border: none; /* Menghapus border default */
+  border-bottom: 2px solid #ccc; /* Border bawah saja */
   background-color: var(--white);
   margin-top: 5px;
   outline: none;
+  border-radius: 0; /* Menghapus border-radius */
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 5px var(--primaryColor);
+}
+
+/* Styling untuk textarea */
 .form-group textarea {
-  resize: vertical; /* Agar textarea bisa di-resize secara vertikal */
+  resize: vertical;
   min-height: 100px;
 }
 
-/* Tombol submit */
-
+/* Styling untuk tombol kirim */
 .buttonForm {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   margin-top: 16px;
 }
+
 .btn-submit {
   display: inline-block;
   background-color: var(--primaryColor); /* Warna biru */
@@ -357,11 +397,26 @@ h2 {
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 /* Efek hover pada tombol */
 .btn-submit:hover {
   background-color: #007bff;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .containerContactUs {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hubungiKami,
+  .kontakKami {
+    width: 100%;
+  }
 }
 
 /* end contact us style */
@@ -586,7 +641,9 @@ h5 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    justify-content: space-between;
+    gap: 24px;
+    /* gap: 9%; */
   }
   .mitra-img > img {
     width: 45.5%;
@@ -604,26 +661,25 @@ h5 {
     margin-top: 3rem;
   }
   .member-text ol {
-    list-style: none; /* Hilangkan nomor default */
+    list-style: none;
     padding: 0;
     margin: 0;
     margin-top: 24px;
-    counter-reset: list-counter; /* Reset counter */
+    counter-reset: list-counter;
   }
   .member-text li {
-    display: flex; /* Menggunakan flexbox */
-    align-items: flex-start; /* Pastikan nomor dan teks sejajar di atas */
-    counter-increment: list-counter; /* Tambah nilai counter per li */
-    /* margin-bottom: 1rem; Jarak antar item (opsional) */
+    display: flex;
+    align-items: flex-start;
+    counter-increment: list-counter;
   }
   .member-text li::before {
-    content: counter(list-counter) "."; /* Tampilkan nomor list */
-    min-width: 16px; /* Lebar minimum untuk nomor */
-    text-align: right; /* Rata kanan nomor */
-    margin-right: 10px; /* Jarak antara nomor dengan teks */
+    content: counter(list-counter) ".";
+    min-width: 16px;
+    text-align: right;
+    margin-right: 10px;
   }
   .member-text li p {
-    margin: 0; /* Hilangkan margin default pada paragraf */
+    margin: 0;
     font-size: 18px;
   }
   .contact-us {
