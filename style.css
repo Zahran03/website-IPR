@@ -351,21 +351,28 @@ h2 {
   margin-bottom: 16px;
 }
 
-/* Styling untuk tabel di Hubungi Kami */
-.iprContact table {
-  width: 100%;
-  border-collapse: collapse;
+/* Styling untuk bagian Kontak */
+.iprContact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
-.iprContact table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
+.iprContact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
 }
 
-.iprContact table td:first-child {
-  font-weight: bold;
+.iprContact .contact-item i {
+  font-size: 1.5rem;
+  color: var(--primaryColor); /* Warna untuk icon */
+}
+
+.iprContact .contact-item span {
+  font-size: 1rem;
 }
 
 /* Styling untuk iframe (Google Map) */
@@ -414,12 +421,12 @@ h2 {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: none; /* Menghapus border default */
-  border-bottom: 2px solid #ccc; /* Border bawah saja */
+  border: none;
+  border-bottom: 2px solid #ccc;
   background-color: var(--white);
   margin-top: 5px;
   outline: none;
-  border-radius: 0; /* Menghapus border-radius */
+  border-radius: 0;
 }
 
 .form-group input:focus,
@@ -454,7 +461,6 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-/* Efek hover pada tombol */
 .btn-submit:hover {
   background-color: #007bff;
 }
@@ -470,9 +476,12 @@ h2 {
   .kontakKami {
     width: 100%;
   }
-}
 
-/* end contact us style */
+  /* Membuat icon lebih kecil di perangkat mobile */
+  .iprContact .contact-item i {
+    font-size: 1.2rem;
+  }
+}
 
 /* start footer style */
 footer {
