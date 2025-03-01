@@ -15,6 +15,7 @@
   --success: #25a249;
   --overlay: #121619;
   --coolGray100: #697077;
+  --coolGray20: #dde1e6;
 
   --bodyL: 18px;
   --buttonL: 20px;
@@ -215,7 +216,7 @@ h2 {
 .right-about {
   margin: 35px;
   padding: 24px;
-  border: 1px solid var(--coolGray100);
+  border: 1px solid var(--coolGray20);
 }
 
 .right-about .misi {
@@ -233,13 +234,65 @@ h2 {
   padding: var(--paddingSection);
   text-align: center;
   width: 100%;
-  gap: 40px;
 }
+
 .mitra-text {
   font-size: var(--bodyL);
 }
+
 .mitra .caption {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background: var(--white);
+  white-space: nowrap;
+  position: relative;
+  padding: 50px 0;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 150px;
+  margin: 0 40px;
 }
 
 .member {
@@ -279,30 +332,68 @@ h2 {
 .containerContactUs {
   display: flex;
   gap: 48px;
+  flex-wrap: wrap;
 }
 
 .hubungiKami,
 .kontakKami {
-  width: 50%;
+  width: 48%;
+  box-sizing: border-box;
 }
 
-.contact-us .caption {
-  margin-bottom: 24px;
+/* Styling untuk header */
+.hubungiKami > h1,
+.kontakKami > h1 {
+  font-family: "Roboto", sans-serif;
+  color: var(--thirdColor);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
-.iprContact {
-  margin: 48px 0 48px 0;
+/* Styling untuk bagian Kontak */
+.iprContact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
 }
-.kontakKami > h2 {
+
+.iprContact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.iprContact .contact-item i {
+  font-size: 1.5rem;
+  color: var(--primaryColor); /* Warna untuk icon */
+}
+
+.iprContact .contact-item span {
+  font-size: 1rem;
+}
+
+/* Styling untuk iframe (Google Map) */
+.iprMaps iframe {
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+/* Styling untuk form dalam Kontak Kami */
+.kontakKami > h1 {
   margin-top: 8px;
 }
 
 .contact-form {
   width: 100%;
-  margin-top: 48px;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.89);
+  margin-top: 16px;
   border-radius: 5px;
+  background-color: var(--white);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Setiap grup label + input/textarea */
@@ -310,11 +401,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Label dan teks "Wajib Diisi" */
 .form-group label {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 .required {
@@ -324,32 +415,40 @@ h2 {
   margin-top: 4px;
 }
 
-/* Input dan textarea */
+/* Styling untuk input dan textarea */
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
   background-color: var(--white);
   margin-top: 5px;
   outline: none;
+  border-radius: 0;
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 5px var(--primaryColor);
+}
+
+/* Styling untuk textarea */
 .form-group textarea {
-  resize: vertical; /* Agar textarea bisa di-resize secara vertikal */
+  resize: vertical;
   min-height: 100px;
 }
 
-/* Tombol submit */
-
+/* Styling untuk tombol kirim */
 .buttonForm {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   margin-top: 16px;
 }
+
 .btn-submit {
   display: inline-block;
   background-color: var(--primaryColor); /* Warna biru */
@@ -358,11 +457,30 @@ h2 {
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* Efek hover pada tombol */
 .btn-submit:hover {
   background-color: #007bff;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .containerContactUs {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hubungiKami,
+  .kontakKami {
+    width: 100%;
+  }
+
+  /* Membuat icon lebih kecil di perangkat mobile */
+  .iprContact .contact-item i {
+    font-size: 1.2rem;
+  }
 }
 
 /* end contact us style */
@@ -583,16 +701,18 @@ h5 {
     text-align: center;
   }
 
-  .mitra-img {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
-    /* gap: 9%; */
+  .logos:before,
+  .logos:after {
+    height: 100px;
   }
-  .mitra-img > img {
-    width: 45.5%;
+
+  .logos-slide {
+    animation: 15s slide infinite linear;
+  }
+
+  .logos-slide img {
+    height: 100px;
+    margin: 0 20px;
   }
 
   .member {
@@ -601,11 +721,6 @@ h5 {
   }
   .member-text {
     width: 100%;
-  }
-
-  .member h2 {
-    font-size: 24px;
-    text-align: left;
   }
 
   .button {
