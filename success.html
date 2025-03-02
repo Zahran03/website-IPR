@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +21,6 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
     <header class="navbar" id="navbar">
       <div class="containerNav">
         <a href="/index.html">
@@ -31,72 +34,31 @@
             <img src="assets/logoNavbar.png" alt="iprLogo" />
           </div>
           <ul>
-            <li><a href="/index.html#about">Tentang Kami</a></li>
-            <li><a href="/index.html#member">Keanggotaan</a></li>
-            <li><a href="/index.html#contact-us">Hubungi Kami</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#member">Keanggotaan</a></li>
+            <li><a href="#contact-us">Hubungi Kami</a></li>
             <li><a href="/gallery.html">Galeri</a></li>
           </ul>
           <a href="" class="translateBTN">Translate</a>
         </nav>
       </div>
     </header>
-    <!-- End Navbar -->
-    <!-- start Gallert Section -->
-    <section id="gallery">
-      <div class="gallery">
-        <div class="caption">GALERI</div>
-        <h2>Dokumentasi Kegiatan Indonesian Plastic Recyclers</h2>
-      </div>
-
-      <div class="left-gallery">
-        <h5>13-14 November 2024</h5>
-        <h5>PRSA Singapore 2024</h5>
-        <hr />
-      </div>
-
-      <div class="gallery-img">
-        <img src="assets/galerif1.jpeg" />
-        <img src="assets/galerif2.jpeg" />
-        <img src="assets/galerif3.jpeg" />
-        <img src="assets/galerif4.jpeg" />
-        <img src="assets/galerif5.jpeg" />
-        <img src="assets/galerif6.jpeg" />
-        <img src="assets/galerif7.jpeg" />
-      </div>
-
-      <div class="right-gallery">
-        <h5>2 Agustus 2024</h5>
-        <h5>Impact Talk TIM</h5>
-        <hr />
-      </div>
-
-      <div class="gallery-img">
-        <img src="assets/impact1.png" />
-        <img src="assets/impact2.png" />
-        <img src="assets/impact3.png" />
-        <img src="assets/impact4.png" />
-        <img src="assets/impact5.png" />
-        <img src="assets/impact6.png" />
-        <img src="assets/impact7.png" />
-      </div>
-
-      <div class="left-gallery">
-        <h5>13 Agustus 2024</h5>
-        <h5>JS Luwansa</h5>
-        <hr />
-      </div>
-
-      <div class="gallery-img">
-        <img src="assets/luwansa1.png" />
-        <img src="assets/luwansa2.png" />
-        <img src="assets/luwansa3.png" />
-        <img src="assets/luwansa4.png" />
-        <img src="assets/luwansa5.png" />
-        <img src="assets/luwansa6.png" />
-        <img src="assets/luwansa7.png" />
+    <section id="container-success" class="container-success">
+      <div class="success">
+        <div class="success-icon">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </div>
+        <h2>Pendaftaran Berhasil!</h2>
+        <div class="success-text">
+          <p>
+            Mohon untuk menunggu konfirmasi lebih lanjut dari pihak kami yang
+            akan kami sampaikan melalui email atau kontak yang telah Anda
+            daftarkan.
+          </p>
+        </div>
+        <a href="index.html" class="button">Ke Halaman Utama</a>
       </div>
     </section>
-    <!-- end Gallert Section -->
     <footer>
       <div class="footerContainer">
         <div class="footerText">
@@ -125,6 +87,5 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

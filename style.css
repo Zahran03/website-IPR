@@ -37,7 +37,7 @@ h2 {
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -487,6 +487,9 @@ h2 {
 
 /* start footer style */
 footer {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
   width: 100%;
   background-color: var(--primaryColor);
   height: 88px;
@@ -564,6 +567,32 @@ h5 {
   width: 422px;
   height: 240px;
   object-fit: cover;
+}
+
+/* success style */
+.container-success {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--paddingSection);
+  text-align: center;
+  gap: 40px;
+}
+
+.success-icon {
+  font-size: 100px;
+}
+
+.success-text {
+  font-size: var(--bodyL);
 }
 
 /* responsive style */
