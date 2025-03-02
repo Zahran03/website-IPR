@@ -94,6 +94,7 @@ tbody tr:hover {
   z-index: 100;
   justify-content: center;
   align-items: center;
+  overflow-y: scrool;
 }
 
 .modal-content {
@@ -101,8 +102,12 @@ tbody tr:hover {
   border-radius: 8px;
   width: 90%;
   max-width: 600px;
+  max-height: 80vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
 }
 
 .modal-header {
@@ -111,6 +116,17 @@ tbody tr:hover {
   align-items: center;
   padding: 16px 24px;
   border-bottom: 1px solid #e1e5eb;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 
 .modal-header h2 {
