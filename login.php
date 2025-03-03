@@ -1,3 +1,29 @@
+<?php 
+require "Backend/functions.php";
+session_start();
+
+if( isset($_POST["login"])){
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $result = mysqli_query($conn, "SELECT * FROM admins WHERE username = '$username'");
+    if( mysqli_num_rows($result) === 1){
+        $row = mysqli_fetch_assoc($result);
+        if( password_verify($password, $row["password"])){
+            $_SESSION["id"] = $row["id"];
+            header("Location: dashboard.php");
+            exit;
+        }
+    }
+
+    $error = true;
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
@@ -23,12 +49,13 @@
         <p>Silahkan masuk untuk melanjutkan</p>
       </div>
 
-      <form>
+      <form action="" method="post">
         <div class="form-group">
-          <label for="email">Email Address</label>
+          <label for="username">Username</label>
           <input
-            type="email"
-            id="email"
+            type="text"
+            id="username"
+            name="username"
             class="form-control"
             placeholder="Placeholder"
           />
@@ -39,6 +66,7 @@
           <input
             type="password"
             id="password"
+            name="password"
             class="form-control"
             placeholder="Placeholder"
           />
@@ -48,7 +76,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn-login">Masuk</button>
+        <button type="submit" class="btn-login" name="login">Masuk</button>
       </form>
     </div>
   </body>
