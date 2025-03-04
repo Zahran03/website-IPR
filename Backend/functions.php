@@ -194,7 +194,7 @@
     function hapus($id){
         global $conn;
     
-        mysqli_query($conn, "DELETE FROM registration WHERE id = $id");
+        mysqli_query($conn, "DELETE FROM registrations WHERE id = $id");
     
         return mysqli_affected_rows($conn);
     }

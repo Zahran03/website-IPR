@@ -72,7 +72,12 @@ if(!empty($search)) {
                             <td><?= $registration["nama_organisasi"] ?></td>
                             <td><?= $registration["nama_lengkap"] ?></td>
                             <td><?= $registration["penjelasan_bahan_limbah"] ?></td>
-                            <td><button class="btn btn-primary" onclick="openModal(<?= $registration["id"] ?>)">View Details</button></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-primary" onclick="openModal(<?= $registration["id"] ?>)">View Details</button>
+                                    <a href="delete.php?id=<?= $registration["id"] ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this registration?')">Delete</a>
+                                </div>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
