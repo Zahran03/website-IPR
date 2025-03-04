@@ -16,6 +16,29 @@
         return $data;
     }
 
+    // Search function for registrations
+    function searchRegistrations($keyword) {
+        global $conn;
+        
+        // Sanitize the search keyword to prevent SQL injection
+        $keyword = mysqli_real_escape_string($conn, $keyword);
+        
+        // Build query to search across multiple columns
+        $query = "SELECT * FROM registrations 
+                WHERE nama_organisasi LIKE '%$keyword%' 
+                OR nama_lain LIKE '%$keyword%'
+                OR nama_lengkap LIKE '%$keyword%'
+                OR email LIKE '%$keyword%'
+                OR email_penanggung LIKE '%$keyword%' 
+                OR kota LIKE '%$keyword%'
+                OR alamat LIKE '%$keyword%'
+                OR penjelasan_bahan_limbah LIKE '%$keyword%'
+                OR produk_yang_dihasilkan LIKE '%$keyword%'";
+        
+        // Use the query function to execute the search
+        return query($query);
+    }
+
     function tambah($data) {
         global $conn;
         

@@ -6,7 +6,15 @@ if( !isset($_SESSION["id"]) ){
     exit;
 } 
 
-$registrations = query("SELECT * FROM registrations");
+// Get search query if it exists
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Use the search function if search query exists, otherwise get all registrations
+if(!empty($search)) {
+    $registrations = searchRegistrations($search);
+} else {
+    $registrations = query("SELECT * FROM registrations");
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +31,26 @@ $registrations = query("SELECT * FROM registrations");
             <h1>User Management Dashboard</h1>
         </div>
         
+        <!-- Search Bar -->
+        <div class="search-container">
+            <form action="" method="GET">
+                <input type="text" name="search" placeholder="Search by name, organization, or email..." value="<?= htmlspecialchars($search) ?>">
+                <button type="submit" class="search-btn">Search</button>
+                <?php if(!empty($search)): ?>
+                    <a href="dashboard.php" class="reset-btn">Reset</a>
+                <?php endif; ?>
+            </form>
+        </div>
+        
+        <!-- Search results info -->
+        <?php if(!empty($search)): ?>
+        <div class="search-results">
+            <p>Showing results for: "<?= htmlspecialchars($search) ?>" (<?= count($registrations) ?> results found)</p>
+        </div>
+        <?php endif; ?>
+        
         <div class="table-container">
+            <?php if(count($registrations) > 0): ?>
             <table>
                 <thead>
                     <tr>
@@ -44,6 +71,11 @@ $registrations = query("SELECT * FROM registrations");
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <?php else: ?>
+            <div class="no-results">
+                <p>No registrations found matching your search criteria.</p>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
     
