@@ -7,6 +7,37 @@ body {
   color: #333;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar-logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
 .container {
   width: 95%;
   max-width: 1200px;

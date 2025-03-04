@@ -45,7 +45,7 @@ if( isset($_POST["login"])){
   <body>
     <div class="login-container">
       <div class="login-header">
-        <h1>Selamat Datang Kembali</h1>
+        <h1>Login Dashboard Admin</h1>
         <p>Silahkan masuk untuk melanjutkan</p>
       </div>
 

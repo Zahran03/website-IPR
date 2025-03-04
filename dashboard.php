@@ -26,6 +26,12 @@ if(!empty($search)) {
     <link rel="stylesheet" href="dashboard.css?version=12345">
 </head>
 <body>
+    <nav class="navbar">
+        <h2 class="navbar-logo">IPR Dashboard Admin</h2>
+        <?php if( isset($_SESSION["id"]) ) : ?>
+            <a href="logout.php" class="logout-btn">Logout</a>
+        <?php endif; ?>
+    </nav>
     <div class="container">
         <div class="header">
             <h1>User Management Dashboard</h1>
