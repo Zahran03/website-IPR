@@ -83,9 +83,9 @@
         $file_surat = uploadFile('file-surat', 'surat');
         $file_npwp = uploadFile('file-npwp', 'npwp');
         
-        // if (!$file_ktp || !$file_surat || !$file_npwp) {
-        //     return false;
-        // }
+        if (!$file_ktp || !$file_surat || !$file_npwp) {
+            return false;
+        }
         
         // Agreement checkbox
         $persetujuan = isset($data["persetujuan"]) ? 1 : 0;
@@ -149,10 +149,10 @@
         $newFileName = uniqid() . '.' . $fileExtension;
         $uploadPath = 'uploads/' . $targetDir . '/' . $newFileName;
         
-        // Create directory if it doesn't exist
-        if (!file_exists('uploads/' . $targetDir)) {
-            mkdir('uploads/' . $targetDir, 0777, true);
-        }
+        // // Create directory if it doesn't exist
+        // if (!file_exists('uploads/' . $targetDir)) {
+        //     mkdir('uploads/' . $targetDir, 0777, true);
+        // }
         
         // Move uploaded file
         if (move_uploaded_file($tmpName, $uploadPath)) {

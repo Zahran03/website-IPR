@@ -65,7 +65,7 @@ if( isset( $_POST["daftar"])){
     <!-- Second Form: Detail Organisasi -->\
 
     <section class="formSection">
-      <form method="post" class="container">
+      <form method="post" class="container" enctype="multipart/form-data">
         <h1 class="title">Indonesian Plastic Recyclers</h1>
         <p class="descText">Form pendaftaran keanggotaan</p>
 
@@ -277,7 +277,7 @@ if( isset( $_POST["daftar"])){
               id="file-ktp"
               name="file-ktp"
               accept="image/*"
-              style="display: none"
+              style="display: block"
             />
             <div
               id="file-ktp-name"
@@ -312,7 +312,7 @@ if( isset( $_POST["daftar"])){
               id="file-surat"
               name="file-surat"
               accept="image/*"
-              style="display: none"
+              style="display: block"
             />
             <div
               id="file-surat-name"
@@ -345,7 +345,7 @@ if( isset( $_POST["daftar"])){
               id="file-npwp"
               name="file-npwp"
               accept="image/*"
-              style="display: none"
+              style="display: block"
             />
             <div
               id="file-npwp-name"
