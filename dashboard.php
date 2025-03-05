@@ -24,6 +24,7 @@ if(!empty($search)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Dashboard</title>
     <link rel="stylesheet" href="dashboard.css?version=12345">
+    
 </head>
 <body>
     <nav class="navbar">
@@ -123,6 +124,40 @@ if(!empty($search)) {
                     <div class="user-detail"><strong>Kapasitas Per Bulan:</strong> <?= $registration["kapasitas"] ?></div>
                     <div class="user-detail"><strong>Jumlah Tenaga Kerja:</strong> <?= $registration["jumlah_tenaga_kerja"] ?></div>
                     <div class="user-detail"><strong>Produk Yang Di Hasilkan:</strong> <?= $registration["produk_yang_dihasilkan"] ?></div>
+                    
+                    <h3>Dokumen Uploaded</h3>
+                    <div class="document-section">
+                        <div class="user-detail"><strong>KTP:</strong>
+                            <?php if (!empty($registration["file_ktp"])): ?>
+                                <div class="document-preview">
+
+                                    <img src="<?= $registration["file_ktp"] ?>" class="document-preview" alt="KTP Document" >
+                                </div>
+                            <?php else: ?>
+                                No KTP document uploaded
+                            <?php endif; ?>
+                        </div>
+                        <div class="user-detail"><strong>Surat Keterangan:</strong>
+                            <?php if (!empty($registration["file_surat_keterangan"])): ?>
+                                <div class="document-preview">
+
+                                    <img src="<?= $registration["file_surat_keterangan"] ?>" class="document-preview" alt="KTP Document" >
+                                </div>
+                            <?php else: ?>
+                                No Surat Keterangan document uploaded
+                            <?php endif; ?>
+                        </div>
+                        <div class="user-detail"><strong>NPWP:</strong>
+                            <?php if (!empty($registration["file_npwp"])): ?>
+                                <div class="document-preview">
+
+                                    <img src="<?= $registration["file_npwp"] ?>" class="document-preview" alt="KTP Document" >
+                                </div>
+                            <?php else: ?>
+                                No NPWP document uploaded
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -226,7 +226,17 @@ tbody tr:hover {
   background-color: #fff8e1;
   color: #b68d00;
 }
-
+.document-preview {
+  width: 100%;
+  /* max-height: 300px; */
+  margin: 10px 0;
+}
+.document-preview > img {
+  width: 100%;
+}
+.document-section {
+  margin-bottom: 15px;
+}
 /* Search Container Styles */
 .search-container {
   margin: 20px 0;
