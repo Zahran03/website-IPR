@@ -26,7 +26,7 @@ if( isset( $_POST["daftar"])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indonesian Plastic Recyclers</title>
-    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="registration.css?version=12345" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,7 +69,7 @@ if( isset( $_POST["daftar"])){
         <h1 class="title">Indonesian Plastic Recyclers</h1>
         <p class="descText">Form pendaftaran keanggotaan</p>
 
-        <h2>Detail Organisasi</h2>
+        <h2 class="heading2">Detail Organisasi</h2>
 
         <div class="form-group">
           <label for="nama-organisasi">Nama Organisasi/Perusahaan</label>
@@ -114,7 +114,7 @@ if( isset( $_POST["daftar"])){
         </div>
 
         <div>
-          <h2>Detail Penanggung Jawab</h2>
+          <h2 class="heading2">Detail Penanggung Jawab</h2>
 
           <div class="form-group">
             <label for="nama-lengkap">Nama Lengkap</label>
@@ -171,7 +171,7 @@ if( isset( $_POST["daftar"])){
 
         <!-- third form -->
         <div>
-          <h2>Informasi Usaha</h2>
+          <h2 class="heading2">Informasi Usaha</h2>
 
           <div class="form-group">
             <label for="penjelasan-bahan-limbah"

@@ -76,6 +76,7 @@ if(!empty($search)) {
                             <td>
                                 <div class="action-buttons">
                                     <button class="btn btn-primary" onclick="openModal(<?= $registration["id"] ?>)">View Details</button>
+                                    <a href="edit.php?id=<?= $registration["id"] ?>" class="btn btn-edit" style="background-color: #3498db; color: white; text-decoration: none;">Edit</a>
                                     <a href="delete.php?id=<?= $registration["id"] ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this registration?')">Delete</a>
                                 </div>
                             </td>
